@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+
+	var arr = [4,2,5,3,1,6,78,54,21];
+	function maopao (arr){
+		var temp;
+		for(var i = 0; i < arr.length;i++){
+			for(var j = 0; j < arr.length -1; j++){
+				if(arr[j] > arr[j+1]){
+					temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+					temp = [];
+				}
+			}
+		}
+		return arr;
+	}
+	console.log(maopao(arr));
+	var arrr = [40,20,50,13,1,36,78,54,21];
+	function maopao1 (arr){
+		var temp;
+		for(var i = 0; i < arr.length;i++){
+			for(var j = 0; j < arr.length -1-i; j++){
+				if(arr[j] > arr[j+1]){
+					temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+					temp = [];
+				}
+			}
+		}
+		return arr;
+	}
+	console.log(maopao1(arrr));
+</script>
+</html>
